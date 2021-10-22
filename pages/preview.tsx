@@ -1,19 +1,8 @@
-import {useMemo, useState} from 'react'
-import * as runtime from 'react/jsx-runtime'
-import {evaluateSync} from 'xdm'
+import {useState} from 'react'
+import {MarkdownPreview} from '../components/MarkdownPreview'
 
 export default function Preview() {
   const [source, setSource] = useState('')
-
-  const {default: Compiled} = useMemo(
-    () =>
-      evaluateSync(
-        source,
-        // @ts-expect-error works but type isn't lining up for some reason
-        runtime,
-      ),
-    [source],
-  )
 
   return (
     <div>
@@ -23,7 +12,7 @@ export default function Preview() {
         cols={40}
         rows={20}
       />
-      <Compiled />
+      <MarkdownPreview source={source} />
     </div>
   )
 }
