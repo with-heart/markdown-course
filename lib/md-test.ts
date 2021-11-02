@@ -10,7 +10,16 @@ export const allHeadingDepthsTest = () => (tree: Root, file: VFile) => {
 
   // visit each `heading` node and add its depth to the "found" list
   visit(tree, 'heading', (node) => {
-    foundHeadings.add(node.depth)
+    // check that we have a child `text` with actual text in its `value`
+    const hasValidTextChild = Boolean(
+      node.children.find(
+        (child) => child.type === 'text' && child.value.length,
+      ),
+    )
+
+    if (hasValidTextChild) {
+      foundHeadings.add(node.depth)
+    }
   })
 
   // missing headings are the difference between the required headings and the

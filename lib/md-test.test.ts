@@ -20,4 +20,17 @@ describe('allHeadingDepthsTest', () => {
     const result = await remark().use(allHeadingDepthsTest).process(text)
     expect(result.data.missingHeadings).toEqual([])
   })
+
+  test('reports empty headings as failures', async () => {
+    const text = `
+#
+##
+###
+####
+#####
+######
+    `.trim()
+    const result = await remark().use(allHeadingDepthsTest).process(text)
+    expect(result.data.missingHeadings).toEqual([1, 2, 3, 4, 5, 6])
+  })
 })
