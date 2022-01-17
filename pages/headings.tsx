@@ -2,6 +2,7 @@ import {useState} from 'react'
 import {remark} from 'remark'
 import {Container} from '../components/container'
 import {MarkdownPreview} from '../components/markdown-preview'
+import {Textarea} from '../components/textarea'
 import {allHeadingDepthsTest} from '../lib/md-test'
 
 export default function Headings(): JSX.Element {
@@ -30,7 +31,7 @@ export default function Headings(): JSX.Element {
             </li>
           ))}
         </ul>
-        <textarea
+        <Textarea
           value={source}
           onChange={(event) => setSource(event.target.value)}
           cols={30}
