@@ -1,4 +1,5 @@
 import {createStitches} from '@stitches/react'
+import type * as Stitches from '@stitches/react'
 import {gray} from '@radix-ui/colors'
 
 export const {
@@ -12,13 +13,103 @@ export const {
   theme,
 } = createStitches({
   theme: {
-    fonts: {
-      body: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji"',
-      mono: '"Source Code Pro", monospace',
-    },
     colors: {
       ...gray,
     },
+    fonts: {
+      body: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji"',
+      heading: '$body',
+      mono: '"Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+    },
+    fontSizes: {
+      xs: '16px',
+      sm: '18px',
+      md: '20px',
+      lg: '24px',
+      xl: '28px',
+    },
+    fontWeights: {
+      hairline: '100',
+      thin: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      heavy: '800',
+      black: '900',
+    },
+    letterSpacings: {
+      tighter: '-0.05em',
+      tight: '-0.025em',
+      normal: '0',
+      wide: '0.025em',
+      wider: '0.05em',
+      widest: '0.1em',
+    },
+    lineHeights: {
+      none: 1,
+      xs: 1.25,
+      sm: 1.375,
+      md: 1.5,
+      lg: 1.625,
+      xl: 2,
+    },
+    sizes: {
+      full: '100%',
+    },
+  },
+  media: {
+    bp1: '(min-width: 750px)',
+    'reduced-motion': '(prefers-reduced-motion: reduce)',
+  },
+  utils: {
+    m: (value: Stitches.PropertyValue<'margin'>) => ({
+      margin: value,
+    }),
+    mx: (value: Stitches.PropertyValue<'margin'>) => ({
+      marginLeft: value,
+      marginRight: value,
+    }),
+    my: (value: Stitches.PropertyValue<'margin'>) => ({
+      marginTop: value,
+      marginBottom: value,
+    }),
+    mt: (value: Stitches.PropertyValue<'margin'>) => ({
+      marginTop: value,
+    }),
+    mr: (value: Stitches.PropertyValue<'margin'>) => ({
+      marginRight: value,
+    }),
+    mb: (value: Stitches.PropertyValue<'margin'>) => ({
+      marginBottom: value,
+    }),
+    ml: (value: Stitches.PropertyValue<'margin'>) => ({
+      marginLeft: value,
+    }),
+    p: (value: Stitches.PropertyValue<'padding'>) => ({
+      padding: value,
+    }),
+    px: (value: Stitches.PropertyValue<'padding'>) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    py: (value: Stitches.PropertyValue<'padding'>) => ({
+      paddingTop: value,
+      paddingBottom: value,
+    }),
+    pt: (value: Stitches.PropertyValue<'padding'>) => ({
+      paddingTop: value,
+    }),
+    pr: (value: Stitches.PropertyValue<'padding'>) => ({
+      paddingRight: value,
+    }),
+    pb: (value: Stitches.PropertyValue<'padding'>) => ({
+      paddingBottom: value,
+    }),
+    pl: (value: Stitches.PropertyValue<'padding'>) => ({
+      paddingLeft: value,
+    }),
   },
 })
 
@@ -35,6 +126,7 @@ export const globalStyles = globalCss({
     '-moz-tab-size': 4,
     tabSize: 4,
     fontFamily: '$body',
+    fontSize: '$md',
   },
   body: {
     margin: 0,
@@ -61,6 +153,7 @@ export const globalStyles = globalCss({
   `]: {
     fontSize: 'inherit',
     fontWeight: 'inherit',
+    fontFamily: '$heading',
   },
   a: {
     color: 'inherit',
