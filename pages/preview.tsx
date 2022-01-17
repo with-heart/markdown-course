@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {MarkdownPreview} from '../components/MarkdownPreview'
+import {MarkdownPreview} from '../components/markdown-preview'
 
 export default function Preview(): JSX.Element {
   const [source, setSource] = useState('')

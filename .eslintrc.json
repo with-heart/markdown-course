@@ -5,7 +5,8 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier",
     "plugin:jest/recommended",
-    "plugin:jest/style"
+    "plugin:jest/style",
+    "plugin:unicorn/recommended"
   ],
   "overrides": [
     {
@@ -22,6 +23,17 @@
     "@typescript-eslint/no-unnecessary-condition": "error",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/prefer-nullish-coalescing": "error",
-    "@typescript-eslint/prefer-optional-chain": "error"
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "unicorn/consistent-function-scoping": "off",
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "replacements": {
+          "props": {
+            "properties": false
+          }
+        }
+      }
+    ]
   }
 }

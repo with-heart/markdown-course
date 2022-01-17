@@ -13,10 +13,8 @@ export const allHeadingDepthsTest =
     // visit each `heading` node and add its depth to the "found" list
     visit(tree, 'heading', (node) => {
       // check that we have a child `text` with actual text in its `value`
-      const hasValidTextChild = Boolean(
-        node.children.find(
-          (child) => child.type === 'text' && child.value.length,
-        ),
+      const hasValidTextChild = node.children.some(
+        (child) => child.type === 'text' && child.value.length > 0,
       )
 
       if (hasValidTextChild) {

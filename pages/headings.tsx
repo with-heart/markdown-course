@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {remark} from 'remark'
-import {MarkdownPreview} from '../components/MarkdownPreview'
+import {MarkdownPreview} from '../components/markdown-preview'
 import {allHeadingDepthsTest} from '../lib/md-test'
 
 export default function Headings(): JSX.Element {
