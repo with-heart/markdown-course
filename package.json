@@ -11,6 +11,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@radix-ui/colors": "^0.1.7",
+    "@stitches/react": "^1.2.5",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
     "mdast": "^3.0.0",
     "next": "^12.0.8",
