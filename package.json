@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "NODE_OPTIONS='--experimental-vm-modules' jest"
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.9.1",
@@ -31,7 +32,9 @@
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-unicorn": "^40.1.0",
+    "husky": ">=6",
     "jest": "^27.3.0",
+    "lint-staged": ">=10",
     "prettier": "^2.5.1",
     "typescript": "4.4.4"
   }
