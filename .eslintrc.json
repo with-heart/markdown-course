@@ -3,9 +3,10 @@
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier"
+    "prettier",
+    "plugin:jest/recommended",
+    "plugin:jest/style"
   ],
-  "plugins": ["unicorn"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
