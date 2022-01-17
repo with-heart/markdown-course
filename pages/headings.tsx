@@ -3,7 +3,7 @@ import {remark} from 'remark'
 import {MarkdownPreview} from '../components/MarkdownPreview'
 import {allHeadingDepthsTest} from '../lib/md-test'
 
-export default function Headings() {
+export default function Headings(): JSX.Element {
   const [source, setSource] = useState('')
   const result = remark().use(allHeadingDepthsTest).processSync(source)
   const missingHeadings = result.data.missingHeadings as number[]

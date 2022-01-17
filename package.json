@@ -10,6 +10,7 @@
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
     "mdast": "^3.0.0",
     "next": "^12.0.8",
     "react": "17.0.2",
@@ -28,7 +29,10 @@
     "babel-jest": "^27.3.0",
     "eslint": "8.0.1",
     "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-unicorn": "^40.1.0",
     "jest": "^27.3.0",
+    "prettier": "^2.5.1",
     "typescript": "4.4.4"
   }
 }

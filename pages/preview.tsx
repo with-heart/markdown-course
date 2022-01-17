@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import {MarkdownPreview} from '../components/MarkdownPreview'
 
-export default function Preview() {
+export default function Preview(): JSX.Element {
   const [source, setSource] = useState('')
 
   return (

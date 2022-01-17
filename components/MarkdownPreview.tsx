@@ -7,7 +7,9 @@ export interface MarkdownPreviewProps {
   source: string
 }
 
-export const MarkdownPreview = ({source}: MarkdownPreviewProps) => {
+export const MarkdownPreview = ({
+  source,
+}: MarkdownPreviewProps): JSX.Element => {
   const {default: Compiled} = useMemo(
     () =>
       evaluateSync(
