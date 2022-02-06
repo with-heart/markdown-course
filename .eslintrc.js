@@ -8,6 +8,8 @@ module.exports = {
     'plugin:jest/style',
     'plugin:unicorn/recommended',
     'plugin:storybook/recommended',
+    'plugin:jest-dom/recommended',
+    'plugin:testing-library/react',
   ],
   overrides: [
     {
