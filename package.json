@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.7",
@@ -24,15 +26,24 @@
     "xdm": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@storybook/addon-actions": "^6.5.0-alpha.36",
+    "@storybook/addon-essentials": "^6.5.0-alpha.36",
+    "@storybook/addon-interactions": "^6.5.0-alpha.36",
+    "@storybook/addon-links": "^6.5.0-alpha.36",
+    "@storybook/react": "^6.5.0-alpha.36",
+    "@storybook/testing-library": "^0.0.9",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.0.2",
     "@types/react": "17.0.30",
+    "babel-loader": "^8.2.3",
     "eslint": "8.0.1",
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^25.7.0",
+    "eslint-plugin-storybook": "^0.5.6",
     "eslint-plugin-unicorn": "^40.1.0",
     "husky": ">=6",
     "jest": "^27.3.0",
