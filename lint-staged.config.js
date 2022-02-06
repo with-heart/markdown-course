@@ -9,6 +9,6 @@ module.exports = {
   ],
 
   // format md + json
-  '**/*.(md|json)': (filenames) =>
+  '**/*.(md|mdx|json)': (filenames) =>
     `yarn prettier --write ${filenames.join(' ')}`,
 }
