@@ -1,13 +1,11 @@
-module.exports = {
-  clearMocks: true,
-  coverageProvider: 'v8',
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+module.exports = createJestConfig({
+  moduleDirectories: ['node_modules', '<rootDir>/'],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  setupFilesAfterEnv: ['./jest.setup.ts'],
-  testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', {presets: ['next/babel']}],
-  },
-  transformIgnorePatterns: ['/node_modules/'],
-}
+  testEnvironment: 'jest-environment-jsdom',
+})
